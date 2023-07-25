@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <h1>Calculadora de Pagamento</h1>
+  <label for="preco">Preço do Produto:</label>
+  <input type="number" id="preco" step="any">
+  <br>
+  <label for="condicao">Condição de Pagamento:</label>
+  <select id="condicao">
+    <option value="1">À vista em dinheiro ou cheque</option>
+    <option value="2">À vista no cartão de crédito</option>
+    <option value="3">Em duas vezes</option>
+    <option value="4">Em três vezes</option>
+  </select>
+  <br>
+  <button onclick="calcularPagamento()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularPagamento() {
+      var preco = parseFloat(document.getElementById("preco").value);
+      var condicao = document.getElementById("condicao").value;
+
+      if (isNaN(preco) || preco <= 0) {
+        alert("Por favor, insira um preço válido.");
+        return;
+      }
+
+      var valorFinal;
+
+      switch (condicao) {
+        case "1":
+          valorFinal = preco * 0.9; // 10% de desconto
+          break;
+        case "2":
+          valorFinal = preco * 0.95; // 5% de desconto
+          break;
+        case "3":
+          valorFinal = preco; // preço normal em duas vezes
+          break;
+        case "4":
+          valorFinal = preco * 1.1; // preço normal + 10% de juros em três vezes
+          break;
+        default:
+          alert("Por favor, escolha uma condição de pagamento válida.");
+          return;
+      }
+
+      var resultadoElement = document.getElementById("resultado");
+      resultadoElement.textContent = "Valor a ser pago: R$ " + valorFinal.toFixed(2);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Multiplicação</h1>
+    <p id="resultado"></p>
+
+    <script>
+        function multiplicar(valor1 , valor2, valor3){
+            let resultado = valor1 * valor2 * valor3
+            let valores = "Valores: " + valor1 + ", " + valor2 + " e " + valor3
+            document.getElementById("resultado").innerHTML = valores + "<br>O resultado da multiplicação é: " + resultado
+        }
+        multiplicar(2, 3, 4)
+    </script>
+</body>
+</html>

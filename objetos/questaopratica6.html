@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+
+    let pessoa1 = {
+       nome: "Igor",
+       idade: 25
+    };
+
+    let pessoa2 = {
+      nome: "Maria",
+      idade: 30
+    };
+
+    let pessoa3 = {
+      nome: "Pedro",
+      idade: 22
+    };
+
+   
+    let pessoas = [pessoa1, pessoa2, pessoa3];
+
+   
+    let resultadoDiv = document.getElementById("resultado");
+
+    for (let i = 0; i < pessoas.length; i++) {
+      let pessoa = pessoas[i];
+      let infoPessoa = "Nome: " + pessoa.nome + ", Idade: " + pessoa.idade;
+      let infoPessoaElement = document.createElement("p");
+      infoPessoaElement.textContent = infoPessoa;
+      resultadoDiv.appendChild(infoPessoaElement);
+    }
+    </script>
+</body>
+</html>

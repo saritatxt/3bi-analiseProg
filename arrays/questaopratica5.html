@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        let notas = []
+
+        for(let i = 0; i < 10; i++){
+            let nota = prompt("Digite a nota do aluno" + (i + 1) + ":")
+                if(nota >= 0 && nota <= 10){
+                    notas.push(Number(nota))
+                }else{
+                    alert("Nota inválida! Digite um valor entre 0 e 10")
+                    i--
+                }
+        }
+        console.log(notas)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let carro = {
+            marca: "Toyota",
+            modelo: "Corolla", 
+            ano: 2022,
+            exibirInformacoes: function(){
+                let mensagem = "Carro: " + this.marca + " -Modelo: "  + this.modelo + " - Ano: " + this.ano
+                return mensagem
+            }
+        }
+
+        let informacoesCarro = carro.exibirInformacoes()
+
+        document.write(informacoesCarro)
+    </script>
+</body>
+</html>

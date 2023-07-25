@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let estoque = {
+        produto: "Camiseta",
+        qtdDisponivel: 10,
+        atualizarEstoque: function(nomeProduto, quantidadeAdicionar){
+            if(nomeProduto === this.produto){
+                this.qtdDisponivel += quantidadeAdicionar
+                return "Estoque atualizado. Nova quantidade disponível de " + this.produto + ": " + this.qtdDisponivel
+            }else{
+                return "Produto não encontrado no estoque"
+            }
+        }
+    }
+
+    function atualizarEstoque(nomeProduto, quantidadeAdicionar){
+        let resultado = estoque.atualizarEstoque(nomeProduto, quantidadeAdicionar)
+        document.write(resultado)
+    }
+
+    atualizarEstoque("Camiseta", 5)
+    </script> 
+</body>
+</html>

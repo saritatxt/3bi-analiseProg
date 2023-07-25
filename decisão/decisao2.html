@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisão</title>
+</head>
+<body>
+    <script>
+        let valor1 = parseInt(prompt("Informe o primeiro número: "))
+        let valor2 = parseInt(prompt("Informe o segundo número: "))
+        let valor3 = parseInt(prompt("Informe o terceiro número: "))
+
+        let valores = [valor1, valor2, valor3]
+        valores.sort(function(a,b){
+            return b-a
+        })
+
+        alert("Valores em ordem descrescente: "+ valores.join(","))
+    </script>
+</body>
+</html>

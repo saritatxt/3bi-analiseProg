@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let animais = ["gato", "cachorro", "pássaro"]
+
+    let novoAnimal = "galinha"
+
+    let novoarray = new Array(animais.length + 1)
+
+    novoarray[0] = novoAnimal
+
+    for( let i = 0; i < animais.length; i++){
+        novoarray[i + 1] = animais[i]
+    }
+
+    animais = novoarray
+
+    console.log(animais)
+   </script> 
+</body>
+</html>

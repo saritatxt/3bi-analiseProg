@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        let vendas2021 = []
+        let vendas2022 = []
+
+        for(let i = 0; i < 12; i++){
+            let venda2021 = prompt("Digite o valor de vendas do mês" + (i + 1) + "de 2021: ")
+            vendas2021.push(Number(venda2021))
+        }
+        for( let i = 0; i < 12; i++){
+            let venda2022 = prompt("Digite o valor de vendas do mês" + (i+1) + "de 2022: ")
+            vendas2022.push(Number(venda2022))
+        }
+
+        let somaMesAMes = []
+
+        for(let i = 0; i < 12; i++){
+            let soma = vendas2021[i] + vendas2022[i]
+            somaMesAMes.push(soma)
+        }
+        
+        console.log("Soma mês a mês das vendas nos dois anos: ")
+        for(let i = 0; i < 12; i++){
+            console.log("Mês " + (i + 1) + ":" + somaMesAMes[1])
+        }
+    </script>
+</body>
+</html>

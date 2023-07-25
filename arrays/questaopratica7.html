@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+     <h1>Separar Notas de Alunos</h1>
+     <button onclick="separarNotas()">Separar Notas</button>
+     <p id="reprovados"></p>
+     <p id="aprovados"></p>
+
+    <script>
+         function separarNotas() {
+            let notas = [];
+
+      
+      for(let i = 0; i < 10; i++) {
+        let nota = prompt("Digite a nota do aluno " + (i + 1) + ":");
+        notas.push(parseFloat(nota));
+      }
+
+      
+        let reprovados = [];
+        let aprovados = [];
+
+      for(let i = 0; i < notas.length; i++) {
+        if(notas[i] < 7) {
+          reprovados.push(notas[i]);
+        }else{
+          aprovados.push(notas[i]);
+        }
+      }
+
+      
+      let reprovadosElement = document.getElementById("reprovados");
+      reprovadosElement.textContent = "Reprovados: " + reprovados.join(", ");
+
+      let aprovadosElement = document.getElementById("aprovados");
+      aprovadosElement.textContent = "Aprovados: " + aprovados.join(", ");
+    }
+
+  </script>
+    </script>
+</body>
+</html>

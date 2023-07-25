@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <h1>Quilometragem de Combustível</h1>
+
+  <label for="quilometragem">Quilometragem (em km):</label>
+  <input type="number" id="quilometragem" step="1">
+  <br>
+  <label for="litros">Litros de Combustível (em litros):</label>
+  <input type="number" id="litros" step="1">
+  <br>
+  <button onclick="calcular()">Calcular</button>
+  <br>
+  <p id="resultado"></p>
+
+  <script>
+    var quilometragemTotal = 0;
+    var litrosTotal = 0;
+    var viagens = 0;
+
+    function calcular() {
+      var quilometragem = parseInt(document.getElementById("quilometragem").value);
+      var litros = parseInt(document.getElementById("litros").value);
+
+      if (isNaN(quilometragem) || isNaN(litros)) {
+        alert("Por favor, insira números inteiros válidos.");
+        return;
+      }
+
+      var consumo = quilometragem / litros;
+
+      quilometragemTotal += quilometragem;
+      litrosTotal += litros;
+      viagens++;
+
+      var resultadoElement = document.getElementById("resultado");
+      resultadoElement.innerHTML += "Viagem " + viagens + ": Consumo: " + consumo.toFixed(2) + " km/l<br>";
+
+      resultadoElement.innerHTML += "Quilometragem Total: " + quilometragemTotal + " km<br>";
+      resultadoElement.innerHTML += "Soma Total de Litros: " + litrosTotal + " litros<br>";
+      resultadoElement.innerHTML += "Consumo Médio: " + (quilometragemTotal / litrosTotal).toFixed(2) + " km/l<br>";
+      resultadoElement.innerHTML += "Média de Quilometragem por Viagem: " + (quilometragemTotal / viagens).toFixed(2) + " km<br>";
+      resultadoElement.innerHTML += "Média de Litros por Viagem: " + (litrosTotal / viagens).toFixed(2) + " litros<br>";
+
+      resultadoElement.innerHTML += "<hr>";
+
+      document.getElementById("quilometragem").value = "";
+      document.getElementById("litros").value = "";
+    }
+  </script> 
+</body>
+</html>

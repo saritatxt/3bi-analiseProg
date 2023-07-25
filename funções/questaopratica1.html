@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Saudação</h1>
+    <p id="saudacao"></p>
+    <script>
+        function saudacao(nome, outro){
+            let saudacao = "Olá " + outro + " tudo bem!<br>Me chamo " + nome + ".<br>Até logo!";
+            document.getElementById("saudacao").innerHTML = saudacao
+        }
+
+        saudacao("Lara", "Rafa")
+    </script>
+</body>
+</html>

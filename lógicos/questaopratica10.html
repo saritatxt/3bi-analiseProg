@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let anoNascimento = parseInt(prompt("Digite o ano do seu nascimento: "))
+
+        let estadoCivil = prompt("Digite o seu estado civil (solteiro ou casado):")
+
+        let anoAtual = new Date().getFullYear() //é um comando usado para obter o ano atual
+        let idade = anoAtual - anoNascimento
+
+        if(estadoCivil === "solteiro" && idade > 18){
+            alert("É solteiro e é maior de 18 anos")
+        }else{
+            alert("Não atende aos critérios de solteiro e maior de 18 anos")
+        }
+    </script>
+</body>
+</html>

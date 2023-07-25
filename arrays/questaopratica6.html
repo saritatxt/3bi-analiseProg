@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Notas dos Alunos</h1>
+     <button onclick="exibirNotas()">Exibir Notas</button>
+     <p id="notas"></p>
+
+<script>
+    function exibirNotas() {
+      
+      let notas = [];
+
+      
+      for (let i = 0; i < 10; i++) {
+        let nota = prompt("Digite a nota do aluno " + (i + 1) + ":");
+        notas.push(parseFloat(nota));
+      }
+
+     
+      let notasElement = document.getElementById("notas");
+      notasElement.textContent = "Notas dos Alunos: " + notas.join(", ");
+    }
+  </script>
+</script>
+
+</body>
+</html>

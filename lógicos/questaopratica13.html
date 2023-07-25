@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let peso = parseFloat(prompt("Digite o peso em kg: "))
+        let altura = parseFloat(prompt("Digite a altura em m: "))
+
+        let imc = peso / (altura * altura)
+
+        let abaixo = (imc < 18,5)
+        let normal = (imc >= 18.5 && imc < 25)
+        let sobrepeso = (imc >= 25 && imc < 30)
+        let obesidade = (imc >= 30)
+
+        document.write("Altura: " + altura + " metros<br>");
+        document.write("Peso: " + peso + " kg<br><br>");
+        document.write("Abaixo do peso? " + abaixo + "<br>");
+        document.write("Peso normal? " + normal + "<br>");
+        document.write("Sobrepeso? " + sobrepeso + "<br>");
+        document.write("Obesidade? " + obesidade + "<br>");
+
+    </script>
+</body>
+</html>

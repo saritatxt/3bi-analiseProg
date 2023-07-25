@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quadrados e Cubos</h1>
+    <table>
+      <tr>
+        <th>Número</th>
+        <th>Quadrado</th>
+        <th>Cubo</th>
+      </tr>
+      <script>
+         function calcularQuadradosECubos() {
+        var tabela = document.querySelector("table");
+
+      for (var i = 0; i <= 10; i++) {
+        var quadrado = i * i;
+        var cubo = i * i * i;
+
+        var row = tabela.insertRow();
+        var numeroCell = row.insertCell(0);
+        var quadradoCell = row.insertCell(1);
+        var cuboCell = row.insertCell(2);
+
+        numeroCell.textContent = i;
+        quadradoCell.textContent = quadrado;
+        cuboCell.textContent = cubo;
+      }
+    }
+
+    calcularQuadradosECubos();
+  </script>
+      </script>
+</body>
+</html>

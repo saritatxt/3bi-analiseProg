@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Digite o primeiro número: "))
+        let num2 = parseFloat(prompt("Digite o segundo número: "))
+        let operacao = prompt("Escolha a operação (+), (-), (*), (/) ou digite sair:")
+
+        let sair = "sair"
+        let soma = num1 + num2
+        let subtracao = num1 - num2
+        let multiplicacao = num1 * num2
+        let divisao = num1 / num2
+       
+        
+
+        if(operacao === "+"){
+            document.write(`O resultado da soma é: ${soma}`)
+        }
+        if(operacao === "-"){
+            document.write(`O resultado da subtração é: ${subtracao}`)
+        }
+        if(operacao === "*"){
+            document.write(`O resultado da multiplicação é: ${multiplicacao}`)
+        }
+        if(operacao === "/"){
+            document.write(`O resultado da divisão é: ${divisao}`)
+        }
+        if(operacao === "sair"){
+           alert("Programa encerrado")
+        }
+    </script>
+</body>
+</html>

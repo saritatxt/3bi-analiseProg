@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <h1>Cara ou Coroa</h1>
+    <button onclick="jogarMoeda()">Jogar Moeda</button>
+    <p id="resultado"></p>
+  
+    <script>
+      function jogarMoeda() {
+        var escolha = prompt("Escolha cara, coroa ou sair:");
+  
+        if (escolha === "sair") {
+          alert("Obrigado por jogar!");
+          return;
+        }
+  
+        if (escolha !== "cara" && escolha !== "coroa") {
+          alert("Escolha inválida!");
+          return;
+        }
+  
+        var moeda = Math.random();
+  
+        var resultado = (moeda < 0.5) ? "cara" : "coroa";
+  
+        exibirResultado(escolha, resultado);
+      }
+  
+      function exibirResultado(escolha, resultado) {
+        var resultadoElement = document.getElementById("resultado");
+  
+        if (escolha === resultado) {
+          resultadoElement.textContent = "Você ganhou!";
+        } else {
+          resultadoElement.textContent = "Você perdeu!";
+        }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        let letras = ["a", "b", "c", "d", "e"]
+        let elementoProcurado = "c"
+        let indiceEncontrado = -1
+
+        for(let i = 0; i < letras.length; i++){
+            if(letras[i] === elementoProcurado){
+                indiceEncontrado = i
+                break
+            }
+        }
+
+        console.log("O índice do elemento " + elementoProcurado + "é: " + indiceEncontrado)
+        
+    </script>
+</body>
+</html>

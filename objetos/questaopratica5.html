@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let estoque = {
+      produto1: {
+        nome: "Camiseta",
+        quantidade: 10
+      },
+      produto2: {
+        nome: "Vestido",
+        quantidade: 15
+      },
+      produto3: {
+        nome: "Sapato",
+        quantidade: 20
+      },
+      produto4: {
+        nome: "Chapéu",
+        quantidade: 5
+      },
+      quantidadeTotalEmEstoque: function() {
+        let quantidadeTotal = 0;
+        for (let produto in this) {
+          if (this[produto].quantidade) {
+            quantidadeTotal += this[produto].quantidade;
+          }
+        }
+        return quantidadeTotal;
+      }
+    };
+    function retornarQuantidadeTotalEmEstoque() {
+      let quantidadeTotal = estoque.quantidadeTotalEmEstoque();
+      document.write(`Quantidade total em estoque: ${quantidadeTotal}`)
+    }
+    retornarQuantidadeTotalEmEstoque();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        let catalogoProdutos = [
+      { id: 1, nome: "Produto 1", preco: 10.99 },
+      { id: 2, nome: "Produto 2", preco: 39.90 },
+      { id: 3, nome: "Produto 3", preco: 7.99 }
+    ];
+
+  
+    let resultadoDiv = document.getElementById("resultado");
+
+    for (let i = 0; i < catalogoProdutos.length; i++) {
+      let produto = catalogoProdutos[i];
+      let infoProduto = "ID: " + produto.id + ", Nome: " + produto.nome + ", Preço: $" + produto.preco.toFixed(2);
+      let infoProdutoElement = document.createElement("p");
+      infoProdutoElement.textContent = infoProduto;
+      resultadoDiv.appendChild(infoProdutoElement);
+    }
+    </script>
+</body>
+</html>

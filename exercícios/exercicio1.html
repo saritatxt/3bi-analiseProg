@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <script>
+      const salarioFixo = parseFloat(prompt("Digite o salário fixo do funcionário:"));
+      const valorVendas = parseFloat(prompt("Digite o valor das vendas do funcionário:"));
+
+        const comissao = valorVendas * 0.04;
+        const salarioFinal = salarioFixo + comissao;
+
+        alert(`Comissão: R$ ${comissao.toFixed(2)}`);
+        alert(`Salário Final: R$ ${salarioFinal.toFixed(2)}`);
+
+
+    </script>
+</body>
+</html>

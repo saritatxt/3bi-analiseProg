@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor = Number(prompt("Digite  valor pago: "))
+        let descontoP = Number(prompt("Digite o valor do desconto (%): "))
+
+        let desconto = (descontoP / 100) * valor
+        let valorP = valor - descontoP
+
+        document.write(`O valor com desconto é: ${valorP} reais`)
+    </script>
+</body>
+</html>

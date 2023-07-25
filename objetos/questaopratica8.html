@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+         var receitas = [
+      {
+        nome: "Bolo de Chocolate",
+        ingredientes: ["Farinha de trigo", "Açúcar", "Ovo", "Cacau em pó", "Leite", "Margarina"],
+        tempoPreparo: 60
+      },
+      {
+        nome: "Farofa de ovo",
+        ingredientes: ["Farinha", "Sal", "Ovo"],
+        tempoPreparo: 5
+      },
+      {
+        nome: "Miojo",
+        ingredientes: ["Temperinho", "Água", "Macarrão"],
+        tempoPreparo: 3
+      }
+    ];
+
+   
+    let resultadoDiv = document.getElementById("resultado");
+
+    for (let i = 0; i < receitas.length; i++) {
+      let receita = receitas[i];
+      let infoReceita = "Receita: " + receita.nome + "<br>Ingredientes: " + receita.ingredientes.join(", ") + "<br>Tempo de Preparo: " + receita.tempoPreparo + " minutos";
+      let infoReceitaElement = document.createElement("p");
+      infoReceitaElement.innerHTML = infoReceita;
+      resultadoDiv.appendChild(infoReceitaElement);
+    }
+    </script>
+</body>
+</html>

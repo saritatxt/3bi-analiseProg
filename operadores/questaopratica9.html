@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Raízes - Equação dp Segundo Grau</h1>
+
+    <label for="a">Valor de a: </label>
+    <input type="number" id="a">
+
+    <label for="b">Valor de b: <b></b>: </label>
+    <input type="number" id="b">
+
+    <label for="c">Valor de c: </label>
+    <input type="number" id="c">
+
+    <button onclick="calcraizes">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        function calcraizes()
+
+        let a = parseFloat(document.getElementById("a").value)
+        let b = parseFloat(document.getElementById("b").value)
+        let c = parseFloat(document.getElementById("c").value)
+
+        let delta = b * b - 4 * a * c
+
+        let raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a)
+        let raiz2 = (-b - Math.sqrt(discrimnante)) / (2 * a)
+
+        document.getElementById("resultado").innerHTML = "As raízes são: "+raiz1 + "e" +raiz2
+    </script>
+</body>
+</html>
